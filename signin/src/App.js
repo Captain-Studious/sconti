@@ -12,12 +12,14 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import logo from './sconti logo.jpg';
+import bgpic from './bg.jpg';
 
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="https://in.linkedin.com/company/scontinent-technologies-pvt-ltd">
         Scontidemo
       </Link>{' '}
       {new Date().getFullYear()}
@@ -42,6 +44,7 @@ export default function SignIn() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
+      <background img={bgpic} className='backgound '><img src='{bgpic}' alt='bg' ></img></background>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -52,9 +55,10 @@ export default function SignIn() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
-          </Avatar>
+         <header className='signheader'>
+            <img src={logo} className='applogo' alt='logo '/>
+         </header>
+
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
