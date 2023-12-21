@@ -15,6 +15,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import logo from './sconti logo.jpg';
 import bgpic from './bg.jpg';
 
+
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -44,8 +45,8 @@ export default function SignIn() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <background img={bgpic} className='backgound '><img src='{bgpic}' alt='bg' ></img></background>
-      <Container component="main" maxWidth="xs">
+    
+      <Container component="main" maxWidth="xs"  >
         <CssBaseline />
         <Box
           sx={{
@@ -53,6 +54,7 @@ export default function SignIn() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            
           }}
         >
          <header className='signheader'>
@@ -64,6 +66,7 @@ export default function SignIn() {
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
+              
               margin="normal"
               required
               fullWidth
